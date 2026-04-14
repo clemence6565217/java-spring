@@ -19,17 +19,17 @@ public class DemoBootApplication {
         SpringApplication.run(DemoBootApplication.class, args);
     }
 
-    // route existante modifiée pour utiliser le service
+    // 1ère route
     @GetMapping("hello")
     public String hello() {
         // Cela va s'afficher dans la console
         System.out.println(bavardService.parler());
-        return "Regardez la console d'IntelliJ !";
+        return "Hello World !";
     }
 
-    // nouvelle route qui retourne directement le texte
-    @GetMapping("blabla")
-    public String blabla() {
-        return bavardService.parler();
+    // 2nd route
+    @GetMapping("cours")
+    public String cours() {
+        return "Bienvenu dans le cours de Mr Sega Sylla";
     }
 }
